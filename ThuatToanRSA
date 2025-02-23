@@ -1,0 +1,12 @@
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+plaintext = "VO THI TUYET SINH"
+k = 14
+plaintext = plaintext.upper()
+ciphertext = ""
+for char in plaintext:
+    if char in alphabet: 
+        new_index = (alphabet.index(char) + k) % 26  
+        ciphertext += alphabet[new_index]
+    else:
+        ciphertext += char  
+print(ciphertext)
